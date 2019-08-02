@@ -9,5 +9,14 @@ wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-lang
 unzip phpMyAdmin-4.9.0.1-all-languages.zip -d /var/www/html/ 
 mv /var/www/html/phpMyAdmin-4.9.0.1-all-languages /var/www/html/phpmyadmin
 
+# Apps
+
+# VS code
+# Processing
+# Composer
+# Slack
+sudo apt install evolution f.lux git spotify firefox chrome nodejs npm docker python3 pip
 
 
+
+#I3
