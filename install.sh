@@ -3,6 +3,15 @@ sudo apt update
 sudo apt dist-upgrade
 
 
+# NTFS Read Write Support
+sudo apt install ntfs-3g
+sudo fdisk -l
+echo 'Wich ntfs disk would you like to use as a Data storage ? ex :  /dev/sda '
+read disk
+echo $disk
+ntfs-3g -o rw,umask=0000 /dev/sda5 /mnt/win-data/
+
+
 # LAMP
 sudo apt install apache2 php libapache2-mod-php mysql-server php-mysql php-curl php-gd php-intl php-json php-mbstring php-xml php-zip
 wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-languages.zip
