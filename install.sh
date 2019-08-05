@@ -2,6 +2,7 @@
 sudo apt update
 sudo apt dist-upgrade
 
+sudo apt install gparted curl
 
 # NTFS Read Write Support
 sudo apt install ntfs-3g
@@ -35,12 +36,33 @@ sudo service apache2 restart
 # Apps
 
 # VS code
-# Processing
+echo "Go to https://code.visualstudio.com/Download and download the last VS Code .deb package" 
+echo "put the downloaded file in the install directory then press enter"
+read enter
+sudo dpkg -i code_*
+
 # Composer
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 chmod +x /usr/local/bin/composer
 
+# Chrome
+ sudo sh -c 'echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
+ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+ sudo apt-get update
 
+sudo apt-get install google-chrome-stable
+
+
+sudo apt install evolution git nodejs npm docker python3 vlc synaptic openvpn
+
+# Processing
+wget http://download.processing.org/processing-3.5.3-linux64.tgz
+unzip processing-* -d $HOME/Documents
+
+# pip
+# f.lux
+# Slack
 
 #I3
+sudo apt install i3 blueman-applet pasystray brightness-controller
