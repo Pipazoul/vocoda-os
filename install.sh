@@ -1,8 +1,10 @@
 # General update
 sudo apt update
 sudo apt dist-upgrade
+sudo ubuntu-drivers autoinstall
 
 sudo apt install gparted curl
+sudo apt install net-tools
 
 # NTFS Read Write Support
 sudo apt install ntfs-3g
@@ -35,6 +37,9 @@ sudo service apache2 restart
 
 # Apps
 
+# Postman
+snap install postman
+
 # VS code
 echo "Go to https://code.visualstudio.com/Download and download the last VS Code .deb package" 
 echo "put the downloaded file in the install directory then press enter"
@@ -54,7 +59,8 @@ chmod +x /usr/local/bin/composer
 sudo apt-get install google-chrome-stable
 
 
-sudo apt install evolution git nodejs npm docker python3 vlc synaptic openvpn
+sudo apt install git nodejs npm docker python3 python3-pip
+vlc synaptic openvpn
 
 # Processing
 wget http://download.processing.org/processing-3.5.3-linux64.tgz

@@ -1,6 +1,10 @@
 # vocoda-os
 My Linux config
 
+# To use 
+(use without sudo)
+> sh install.sh
+
 Tiling manager
 I3 
 
@@ -39,5 +43,16 @@ NPM
 Composer
 Docker
 Slack
+Synaptic
+File Zilla
+Open VPN
 
+## FAQ 
 
+### NTFS MOUNT
+
+**Mounting volume... The disk contains an unclean file system (0, 0).
+Metadata kept in Windows cache, refused to mount.**
+
+Can be fixed with the ntfsfix
+> sudo ntfsfix /dev/sda1
