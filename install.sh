@@ -3,8 +3,7 @@ sudo apt update
 sudo apt dist-upgrade
 sudo ubuntu-drivers autoinstall
 
-sudo apt install gparted curl
-sudo apt install net-tools
+sudo apt install gparted curl net-tools virtualbox
 
 # NTFS Read Write Support
 sudo apt install ntfs-3g
@@ -58,6 +57,8 @@ chmod +x /usr/local/bin/composer
 
 sudo apt-get install google-chrome-stable
 
+# Spotify
+sudo snap install spotify
 
 sudo apt install git nodejs npm docker python3 python3-pip
 vlc synaptic openvpn
