@@ -11,8 +11,9 @@ sudo fdisk -l
 echo 'Wich ntfs disk would you like to use as a Data storage ? ex :  /dev/sda '
 read disk
 echo $disk
-ntfs-3g -o rw,umask=0000 /dev/sda5 /mnt/win-data/
-
+mkdir $HOME/DATA
+ntfs-3g -o rw,umask=0000 $disk /$HOME/DATA/
+sudo apt-get install nmap
 
 # LAMP
 sudo apt install apache2 php libapache2-mod-php mysql-server php-mysql php-curl php-gd php-intl php-json php-mbstring php-xml php-zip
@@ -67,9 +68,29 @@ vlc synaptic openvpn
 wget http://download.processing.org/processing-3.5.3-linux64.tgz
 unzip processing-* -d $HOME/Documents
 
+# Avermedia Vlc support
+sudo apt install kaffeine
+
+# OBS
+sudo add-apt-repository -y ppa:obsproject/obs-studio && sudo apt install -y ffmpeg obs-studio
 # pip
 # f.lux
 # Slack
+sudo snap install --classic slack 
 
 #I3
-sudo apt install i3 blueman-applet pasystray brightness-controller
+sudo apt install i3 pasystray
+#E: Unable to locate package blueman-applet
+#E: Unable to locate package brightness-controller
+
+sudo apt-get install i3-wm dunst i3lock i3status suckless-tools blueman volumeicon-alsa
+sudo apt-get install compton hsetroot rxvt-unicode xsel rofi fonts-noto fonts-mplus xsettingsd lxappearance scrot viewnior
+git clone https://github.com/Pipazoul/i3-starterpack
+# Symbolic links to git repo
+cd $HOME/.config/i3/
+ln -s $HOME/Documents/i3-starterpack/.config/i3/config config
+
+cd $HOME/.config/
+ln -s $HOME/Documents/i3-starterpack/.config/i3status/ i3status
+cp -R .fonts/* $HOME/.fonts/
+i3 restart
