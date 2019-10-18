@@ -3,37 +3,48 @@
 # https://p2p.newcomputers.group/guides/installing-dat-raspberry-pi.html
 # hostapd
 
-sudo apt update && apt upgrade
-sudo apt upgrade-dist
+sudo apt update && apt upgrade -y
+sudo apt upgrade-dist -y
 
+#mount ntfs HD
+sudo apt install ntfs-3g
+sudo fdisk -l
+echo 'Wich ntfs disk would you like to use as a Data storage ? ex :  /dev/sda '
+read disk
+echo 'How would you like to name the mounted folder'
+read mountedFolder
+echo $disk
+mkdir $HOME/$mountedFolder
+ntfs-3g -o rw,umask=0000 $disk /$HOME/$mountedFolder/
 
-# python start script
+# wget kiwix
+# as a service
+# where is library.xml
+# echo Now use ./kiwix-manager to add the kiwix files
+wget https://github.com/kiwix/kiwix-tools/archive/3.0.1.zip
+unzip 3.0.1.zip
+touch 3.0.1/library.xml
+echo 'Use ./kiwix-manager to add the kiwix files'
+sudo cp configs/kiwix.service /etc/systemd/system
+sudo systemctl  enable kiwix.service
+sudo systemctl start kiwix.service
 
-#!/usr/local/bin/python
+#minidlna
+# ask for Music path
+# ask for Video path
+sudo apt install minidlna
+echo 'What is the path to your Music Folder ?'
+read musicFolder
+echo 'What is the path to your Video Folder ?'
+read videoFolder
 
-import time
-loop = 1
+cat 'media_dir='$musicFolder >>  /etc/minidlna.conf 
+cat 'media_dir='$videoFolder >>  /etc/minidlna.conf 
 
-while loop == 1:
-  f = open("logo.txt", "r")
-  text = f.read()
+sudo service minidlna restart
 
-  i = 1
-  while i < 50:
-    print(text)
-    text = text + '-'
-    time.sleep(0.1)
-    i = i+1
-  i = 1
-  text = f.read
-  f.close()
-
-#logo.txt
- __      __                 _        ____   _____
- \ \    / /                | |      / __ \ / ____|
-  \ \  / /__   ___ ___   __| | __ _| |  | | (___
-   \ \/ / _ \ / __/ _ \ / _` |/ _` | |  | |\___ \
-    \  / (_) | (_| (_) | (_| | (_| | |__| |____) |
-     \/ \___/ \___\___/ \__,_|\__,_|\____/|_____/
-
-
+# apache2 
+# write access to pi user
+# add index.html
+sudo apt install apache2
+useradd pi -g www-data

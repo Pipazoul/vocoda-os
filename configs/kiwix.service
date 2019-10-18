@@ -1,0 +1,19 @@
+[Unit]
+Description= Kiwix
+#After=network-online.target
+
+[Service]
+Type=simple
+
+User=root
+#Group=deluge
+#UMask=007
+
+ExecStart=/home/pi/kiwix-tools_linux-armhf-3.0.1/kiwix-serve --library /home/pi/kiwix-tools_linux-armhf-3.0.1/library.x$
+#Restart=on-failure
+
+# Configures the time to wait before service is stopped forcefully.
+TimeoutStopSec=300
+
+[Install]
+WantedBy=multi-user.target
