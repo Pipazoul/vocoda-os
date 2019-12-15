@@ -1,10 +1,13 @@
 # vocoda-os
-My Linux config
+My Linux config apps/tools
 
 # To use 
 (use without sudo)
 > sh install.sh
 
+
+
+**Libraries**
 Tiling manager
 I3 
 
@@ -21,16 +24,6 @@ vhost - lab.lan
 
 ## Apps
 Visual Studio Code
- - Extensions
-  - Theme sunset
-  - Processing
-  - Gitlens
-  - Markdown
-  - Jslint
-  - Python lint
-  - Php lint
-  - Markdown lint
-Evolution
 F.lux
 Git
 Spotify
@@ -56,3 +49,35 @@ Metadata kept in Windows cache, refused to mount.**
 
 Can be fixed with the ntfsfix
 > sudo ntfsfix /dev/sda1
+
+
+# TODO 
+
+v0.1 :
+- [ ] msi specifics
+  - [ ] sh file dedicated
+  - [ ] Backlight on i3
+  - [ ] Sound on i3
+- [ ] Test (VirtualBox)
+- [ ] Release on github
+
+v0.2 :
+- [ ] OpenVPN cert setup as a service
+- [ ] Install Tidal Cycles
+- [ ] Import conf files
+- [ ] Test (VirtualBox)
+- [ ] Auto vscode extensions install 
+  - [ ] Theme sunset
+  - [ ] Processing
+  - [ ] Gitlens
+  - [ ] Markdown Viewer
+  - [ ] Jslint
+  - [ ] Python lint
+  - [ ] Php lint
+  - [ ] Markdown lint
+  - [ ] Tidal Cycles
+- [ ] Evolution Account Import
+- [ ] Release on github
+**Features**
+- [ ] Selectionner les apps a installer
+- [ ] Raspberry Multimedia server ?

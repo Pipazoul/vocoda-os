@@ -1,6 +1,6 @@
 
 # Apps
-
+sudo apt install gparted curl net-tools virtualbox unrar
 # Postman
 snap install postman
 
@@ -25,8 +25,7 @@ sudo apt-get install google-chrome-stable
 # Spotify
 #sudo snap install spotify
 
-sudo apt install git nodejs npm docker python3 python3-pip
-vlc synaptic openvpn
+sudo apt install git nodejs npm docker python3 python3-pip vlc synaptic openvpn
 
 # Processing
 wget http://download.processing.org/processing-3.5.3-linux64.tgz
@@ -42,3 +41,14 @@ sudo add-apt-repository -y ppa:obsproject/obs-studio && sudo apt install -y ffmp
 # Slack
 sudo snap install --classic slack 
 
+# Tidal cycles install
+sudo apt-get install build-essential cabal-install git jackd2
+git clone https://github.com/willbasky/build-supercollider.git
+sh build-supercollider/check-dependencies.sh 
+./build-supercollider/build-supercollider.sh 
+./build-supercollider/build-sc3-plugins.sh
+cabal update
+cabal install tidal
+
+
+sudo apt install python-pip
