@@ -58,6 +58,7 @@ v0.1 :
   - [ ] sh file dedicated
   - [ ] Backlight on i3
   - [ ] Sound on i3
+- [ ] Add user to www-data group
 - [ ] Test (VirtualBox)
 - [ ] Release on github
 

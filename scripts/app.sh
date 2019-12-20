@@ -38,8 +38,13 @@ sudo apt install kaffeine
 sudo add-apt-repository -y ppa:obsproject/obs-studio && sudo apt install -y ffmpeg obs-studio
 # pip
 # f.lux
+# Jdownloader
+
 # Slack
 sudo snap install --classic slack 
+
+# Openv vpn import - network manager
+sudo apt install network-manager-openvpn-gnome openvpn-systemd-resolved
 
 # Tidal cycles install
 sudo apt-get install build-essential cabal-install git jackd2
@@ -50,5 +55,21 @@ sh build-supercollider/check-dependencies.sh
 cabal update
 cabal install tidal
 
+# Syncthing install
+
+# Add the release PGP keys:
+curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+
+# Add the "stable" channel to your APT sources:
+echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+
+# Update and install syncthing:
+sudo apt-get update
+sudo apt-get install syncthing
+
 
 sudo apt install python-pip
+
+sudo apt-get install openvpn network-manager-openvpn network-manager-openvpn-gnome
+
+
