@@ -43,6 +43,9 @@ sudo add-apt-repository -y ppa:obsproject/obs-studio && sudo apt install -y ffmp
 # Slack
 sudo snap install --classic slack 
 
+#Youtube DL
+sudo apt install youtube-dl
+
 # Openv vpn import - network manager
 sudo apt install network-manager-openvpn-gnome openvpn-systemd-resolved
 
@@ -72,4 +75,8 @@ sudo apt install python-pip
 
 sudo apt-get install openvpn network-manager-openvpn network-manager-openvpn-gnome
 
+# Handbrakes
+sudo apt install-y libdvd-pkg
+sudo dpkg-reconfigure libdvd-pkg
+sudo apt install handbrake
 
