@@ -1,4 +1,6 @@
-sudo apt install nvidia-driver-390
+sudo apt upgrade -y
+sudo apt install $(ubuntu-drivers list | tail -1) -y
+#sudo apt install nvidia-driver-390
 
 # NTFS Read Write Support
 sudo apt install ntfs-3g
