@@ -63,6 +63,7 @@ v0.1 :
 - [ ] Release on github
 
 v0.2 :
+- [ ] Append the bashrc config to user bashrc file with the right mount config
 - [ ] OpenVPN cert setup as a service
 - [ ] Install Tidal Cycles
 - [ ] Import conf files
@@ -80,5 +81,5 @@ v0.2 :
 - [ ] Evolution Account Import
 - [ ] Release on github
 **Features**
-- [ ] Selectionner les apps a installer
+- [ ] Select the apps to install
 - [ ] Raspberry Multimedia server ?
