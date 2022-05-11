@@ -1,5 +1,5 @@
 #I3
-sudo apt install i3 pasystray
+sudo apt install i3 pasystray git
 
 sudo apt-get install i3-wm dunst i3lock i3status suckless-tools blueman volumeicon-alsa
 sudo apt-get install compton hsetroot rxvt-unicode xsel rofi fonts-noto fonts-mplus xsettingsd lxappearance scrot viewnior
