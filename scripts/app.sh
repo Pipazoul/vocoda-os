@@ -25,6 +25,9 @@ sudo apt-get install google-chrome-stable
 # Spotify
 sudo snap install spotify
 
+# Discord
+sudo snap install Discord
+
 sudo apt install git nodejs npm docker python3 python3-pip vlc synaptic openvpn
 
 # Processing
