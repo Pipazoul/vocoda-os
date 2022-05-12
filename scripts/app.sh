@@ -5,15 +5,15 @@ sudo apt install gparted curl net-tools virtualbox unrar
 snap install postman
 
 # VS code
-echo "Go to https://code.visualstudio.com/Download and download the last VS Code .deb package" 
-echo "put the downloaded file in the install directory then press enter"
-read enter
-sudo dpkg -i code_*
+#echo "Go to https://code.visualstudio.com/Download and download the last VS Code .deb package" 
+#echo "put the downloaded file in the install directory then press enter"
+#read enter
+#sudo dpkg -i code_*
 
 # Composer
-curl -sS https://getcomposer.org/installer | php
-sudo mv composer.phar /usr/local/bin/composer
-chmod +x /usr/local/bin/composer
+#curl -sS https://getcomposer.org/installer | php
+#sudo mv composer.phar /usr/local/bin/composer
+#chmod +x /usr/local/bin/composer
 
 # Chrome
  sudo sh -c 'echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
@@ -23,13 +23,13 @@ chmod +x /usr/local/bin/composer
 sudo apt-get install google-chrome-stable
 
 # Spotify
-#sudo snap install spotify
+sudo snap install spotify
 
 sudo apt install git nodejs npm docker python3 python3-pip vlc synaptic openvpn
 
 # Processing
-wget http://download.processing.org/processing-3.5.3-linux64.tgz
-unzip processing-* -d $HOME/Documents
+#wget http://download.processing.org/processing-3.5.3-linux64.tgz
+#unzip processing-* -d $HOME/Documents
 
 # Avermedia Vlc support
 sudo apt install kaffeine
@@ -41,7 +41,7 @@ sudo add-apt-repository -y ppa:obsproject/obs-studio && sudo apt install -y ffmp
 # Jdownloader
 
 # Slack
-sudo snap install --classic slack 
+#sudo snap install --classic slack 
 
 #Youtube DL
 sudo apt install youtube-dl
@@ -61,14 +61,14 @@ cabal install tidal
 # Syncthing install
 
 # Add the release PGP keys:
-curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+#curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
 
 # Add the "stable" channel to your APT sources:
-echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+#echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
 
 # Update and install syncthing:
-sudo apt-get update
-sudo apt-get install syncthing
+#sudo apt-get update
+#sudo apt-get install syncthing
 
 
 sudo apt install python-pip
