@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Obsidian
+Exec=/opt/Obsidian.AppImage
+comment=text editor
+Type=Application
+Terminal=false
+Encoding=UTF-8
+Categories=Utility;
