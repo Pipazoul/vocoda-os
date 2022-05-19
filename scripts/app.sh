@@ -78,6 +78,8 @@ sudo apt-add-repository ppa:jtaylor/keepass
 sudo apt-get update
 sudo apt-get install keepass2 
 
+#Install Discord
+sudo snap install discord
 
 sudo apt install python-pip
 
