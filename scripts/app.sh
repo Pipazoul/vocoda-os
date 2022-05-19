@@ -73,6 +73,11 @@ cabal install tidal
 #sudo apt-get update
 #sudo apt-get install syncthing
 
+#Install KeyPass
+sudo apt-add-repository ppa:jtaylor/keepass
+sudo apt-get update
+sudo apt-get install keepass2 
+
 
 sudo apt install python-pip
 
