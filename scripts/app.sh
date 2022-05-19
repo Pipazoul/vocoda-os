@@ -15,6 +15,11 @@ snap install postman
 #sudo mv composer.phar /usr/local/bin/composer
 #chmod +x /usr/local/bin/composer
 
+# Docker
+sudo apt install docker.io
+sudo usermod -aG docker ${USER}
+sudo apt install docker-compose
+
 # Chrome
  sudo sh -c 'echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
