@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Kdrive
+Exec=/opt/kdrive.AppImage
+comment=cloud
+Type=Application
+Terminal=false
+Encoding=UTF-8
+Categories=Utility;
