@@ -4,6 +4,12 @@ sudo apt install gparted curl net-tools virtualbox unrar
 # Postman
 snap install postman
 
+# Github CLI
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+sudo apt update
+sudo apt install gh
+
 # VS code
 #echo "Go to https://code.visualstudio.com/Download and download the last VS Code .deb package" 
 #echo "put the downloaded file in the install directory then press enter"
