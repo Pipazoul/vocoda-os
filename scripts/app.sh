@@ -78,6 +78,10 @@ sudo apt-add-repository ppa:jtaylor/keepass
 sudo apt-get update
 sudo apt-get install keepass2 
 
+# Install fuse dependency for kdrive
+sudo add-apt-repository universe
+sudo apt install libfuse2
+
 #Install Discord
 sudo snap install discord
 
