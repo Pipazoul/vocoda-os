@@ -1,10 +1,6 @@
 # Apps
 sudo apt install curl net-tools unrar
 
-# Oh my bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
-
-
 # Postman
 snap install postman
 
