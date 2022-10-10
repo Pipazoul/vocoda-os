@@ -1,6 +1,8 @@
+# Oh my bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 # Apps
-sudo apt install gparted curl net-tools virtualbox unrar
+sudo apt install curl net-tools unrar
 # Postman
 snap install postman
 
@@ -11,11 +13,7 @@ sudo apt update
 sudo apt install gh
 
 # VS code
-#echo "Go to https://code.visualstudio.com/Download and download the last VS Code .deb package" 
-#echo "put the downloaded file in the install directory then press enter"
-#read enter
-#sudo dpkg -i code_*
-
+snap install code
 # Composer
 #curl -sS https://getcomposer.org/installer | php
 #sudo mv composer.phar /usr/local/bin/composer
