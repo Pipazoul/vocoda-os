@@ -16,6 +16,20 @@ linux_version=$(uname -r | cut -d '-' -f1)
 #battery_status=$(cat /sys/class/power_supply/BAT0/status)
 battery_status=$(acpi)
 
+# using pactl to get the volume
+volume=$(pactl list sinks | grep '^[[:space:]]Volume:' | \
+    head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')    
+
+muted=$(pactl list sinks | grep '^[[:space:]]Mute:' | \
+    head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([a-z][a-z]*\)$,\1,')
+if [ $muted = "yes" ]; then
+    volume="Muted"
+else
+    volume="$volume%"
+fi
+
+wifi=$(iwgetid -r)
+
 # Emojis and characters for the status bar
 # 💎 💻 💡 🔌 ⚡ 📁 \|
-echo $uptime_formatted ↑ $linux_version 🐧 $battery_status 🔋 $date_formatted
+echo 🔊 $volume "|" 🕐 $uptime_formatted "|" 📶 $wifi  "|" 🔋 $battery_status "|" 📅 $date_formatted
